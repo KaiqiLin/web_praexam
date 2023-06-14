@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Search shoes you want</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.14/dist/vue.js"></script>
+</head>
+
+<body onload="showAllShoes()">
+    <div id="app">
+        <div id="header">
+            <h1>shoes shop</h1>
+        </div>
+        <div id="select">
+            <div>
+                <p>choice shoes size: <select name="shoesize">
+                        <option v-for="size in shoe_sizes" v-bind:value="size" v-bind:key="size">{{size}}</option>
+                    </select></p>
+            </div>
+
+            <div class="inputbox">
+                <form>
+                    entry style you like: <input v-model="shoestyle" type="text" name="style"
+                        placeholder="entry the style">
+                </form>
+            </div>
+            <div class="inputbox">
+                <form>
+                    entry brand you like: <input v-model=" shoebrand" type="text" name="brand"
+                        placeholder="entry the brand">
+                </form>
+            </div>
+            <div class="inputbox">
+                <form>
+                    <p>entry price you like: <input v-model="shoeprice" type="range" name="price"
+                            v-bind:max="hight_price">
+                        {{shoeprice}}</p>
+                </form>
+            </div>
+            <button name="search" type="button" onclick="getyouwant()">search</button>
+        </div>
+    </div>
+    <div id="display">
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+        <div class="showoutcome">
+            <h2>brand</h2>
+            <h3>shoe_id</h3>
+            <p>size</p>
+            <p>style</p>
+            <p>price</p>
+        </div>
+
+
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Shoes shop company.</p>
+    </footer>
+
+    <script src="javascripts/index.js"></script>
+</body>
+
+
+</html>
